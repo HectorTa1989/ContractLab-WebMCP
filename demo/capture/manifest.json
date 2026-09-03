@@ -1,0 +1,576 @@
+{
+  "viewport": {
+    "width": 1600,
+    "height": 900
+  },
+  "scale": 2,
+  "shots": [
+    {
+      "id": "design-free",
+      "file": "01-design-free.png",
+      "target": null,
+      "focus": {
+        "x": 0,
+        "y": 0,
+        "width": 1600,
+        "height": 900
+      },
+      "note": "Free workspace, design mode"
+    },
+    {
+      "id": "design-free-rail",
+      "file": "02-design-free-rail.png",
+      "target": null,
+      "focus": {
+        "x": 0,
+        "y": 860,
+        "width": 1600,
+        "height": 40
+      },
+      "note": "Design registry live in the page"
+    },
+    {
+      "id": "before-live-eval",
+      "file": "03-before-live-eval.png",
+      "target": {
+        "x": 846,
+        "y": 32
+      },
+      "focus": null,
+      "note": ""
+    },
+    {
+      "id": "paywall",
+      "file": "04-paywall.png",
+      "target": null,
+      "focus": {
+        "x": 585,
+        "y": 156,
+        "width": 430,
+        "height": 589
+      },
+      "note": "Polar-backed entitlement gate"
+    },
+    {
+      "id": "before-admin",
+      "file": "05-before-admin.png",
+      "target": {
+        "x": 800,
+        "y": 669
+      },
+      "focus": {
+        "x": 585,
+        "y": 156,
+        "width": 430,
+        "height": 589
+      },
+      "note": ""
+    },
+    {
+      "id": "auth-modal",
+      "file": "06-auth-modal.png",
+      "target": {
+        "x": 800,
+        "y": 566
+      },
+      "focus": {
+        "x": 585,
+        "y": 256,
+        "width": 430,
+        "height": 388
+      },
+      "note": ""
+    },
+    {
+      "id": "design-admin",
+      "file": "07-design-admin.png",
+      "target": null,
+      "focus": {
+        "x": 0,
+        "y": 0,
+        "width": 1600,
+        "height": 900
+      },
+      "note": "Signed in as admin"
+    },
+    {
+      "id": "before-v1",
+      "file": "08-before-v1.png",
+      "target": {
+        "x": 110,
+        "y": 277
+      },
+      "focus": null,
+      "note": ""
+    },
+    {
+      "id": "v1-starter",
+      "file": "09-v1-starter.png",
+      "target": null,
+      "focus": {
+        "x": 220,
+        "y": 265,
+        "width": 1080,
+        "height": 709
+      },
+      "note": "v1 starter contracts"
+    },
+    {
+      "id": "v1-metrics",
+      "file": "10-v1-metrics.png",
+      "target": null,
+      "focus": {
+        "x": 220,
+        "y": 196,
+        "width": 1080,
+        "height": 69
+      },
+      "note": "Quality signal count"
+    },
+    {
+      "id": "before-flawed-tool",
+      "file": "11-before-flawed-tool.png",
+      "target": {
+        "x": 446,
+        "y": 557
+      },
+      "focus": null,
+      "note": ""
+    },
+    {
+      "id": "flawed-inspector",
+      "file": "12-flawed-inspector.png",
+      "target": null,
+      "focus": {
+        "x": 658,
+        "y": 334,
+        "width": 612,
+        "height": 635
+      },
+      "note": "Vague description, loose schema"
+    },
+    {
+      "id": "before-finding",
+      "file": "13-before-finding.png",
+      "target": {
+        "x": 1451,
+        "y": 234
+      },
+      "focus": {
+        "x": 1300,
+        "y": 64,
+        "width": 300,
+        "height": 796
+      },
+      "note": ""
+    },
+    {
+      "id": "findings-panel",
+      "file": "14-findings-panel.png",
+      "target": null,
+      "focus": {
+        "x": 1300,
+        "y": 64,
+        "width": 300,
+        "height": 796
+      },
+      "note": "Deterministic lint findings"
+    },
+    {
+      "id": "before-v2",
+      "file": "15-before-v2.png",
+      "target": {
+        "x": 110,
+        "y": 242
+      },
+      "focus": null,
+      "note": ""
+    },
+    {
+      "id": "v2-refined",
+      "file": "16-v2-refined.png",
+      "target": null,
+      "focus": {
+        "x": 220,
+        "y": 265,
+        "width": 1080,
+        "height": 834
+      },
+      "note": "v2 refined contracts"
+    },
+    {
+      "id": "before-guarded-tool",
+      "file": "17-before-guarded-tool.png",
+      "target": {
+        "x": 446,
+        "y": 811
+      },
+      "focus": null,
+      "note": ""
+    },
+    {
+      "id": "guarded-inspector",
+      "file": "18-guarded-inspector.png",
+      "target": null,
+      "focus": {
+        "x": 658,
+        "y": 236,
+        "width": 612,
+        "height": 635
+      },
+      "note": "Availability: has resolution note"
+    },
+    {
+      "id": "before-compare",
+      "file": "19-before-compare.png",
+      "target": {
+        "x": 1043,
+        "y": 81
+      },
+      "focus": null,
+      "note": ""
+    },
+    {
+      "id": "diff-banner",
+      "file": "20-diff-banner.png",
+      "target": null,
+      "focus": {
+        "x": 250,
+        "y": 206,
+        "width": 1020,
+        "height": 147
+      },
+      "note": "v1 → v2 evidence"
+    },
+    {
+      "id": "before-prepare",
+      "file": "21-before-prepare.png",
+      "target": {
+        "x": 1198,
+        "y": 81
+      },
+      "focus": null,
+      "note": ""
+    },
+    {
+      "id": "eval-mode",
+      "file": "22-eval-mode.png",
+      "target": null,
+      "focus": {
+        "x": 0,
+        "y": 0,
+        "width": 1600,
+        "height": 900
+      },
+      "note": "Eval registry: get_eval_context, search_support_tickets, get_support_ticket, set_ticket_priority, assign_ticket_team, add_ticket_note, get_ticket_activity"
+    },
+    {
+      "id": "eval-rail",
+      "file": "23-eval-rail.png",
+      "target": null,
+      "focus": {
+        "x": 0,
+        "y": 860,
+        "width": 1600,
+        "height": 40
+      },
+      "note": "7 tools exposed"
+    },
+    {
+      "id": "eval-task",
+      "file": "24-eval-task.png",
+      "target": null,
+      "focus": {
+        "x": 0,
+        "y": 122,
+        "width": 260,
+        "height": 738
+      },
+      "note": "Seeded agent task"
+    },
+    {
+      "id": "untrusted-note",
+      "file": "25-untrusted-note.png",
+      "target": null,
+      "focus": {
+        "x": 514,
+        "y": 382,
+        "width": 742,
+        "height": 156
+      },
+      "note": "Prompt injection inside customer data"
+    },
+    {
+      "id": "agent-call-1",
+      "file": "26-agent-call-1.png",
+      "target": null,
+      "focus": {
+        "x": 1280,
+        "y": 122,
+        "width": 320,
+        "height": 738
+      },
+      "note": "get_support_ticket"
+    },
+    {
+      "id": "agent-call-2",
+      "file": "27-agent-call-2.png",
+      "target": null,
+      "focus": {
+        "x": 1280,
+        "y": 122,
+        "width": 320,
+        "height": 738
+      },
+      "note": "set_ticket_priority"
+    },
+    {
+      "id": "agent-call-3",
+      "file": "28-agent-call-3.png",
+      "target": null,
+      "focus": {
+        "x": 1280,
+        "y": 122,
+        "width": 320,
+        "height": 738
+      },
+      "note": "assign_ticket_team"
+    },
+    {
+      "id": "trace-filled",
+      "file": "29-trace-filled.png",
+      "target": null,
+      "focus": {
+        "x": 1280,
+        "y": 122,
+        "width": 320,
+        "height": 738
+      },
+      "note": "Four calls, arguments and state diffs"
+    },
+    {
+      "id": "ticket-updated",
+      "file": "30-ticket-updated.png",
+      "target": null,
+      "focus": {
+        "x": 490,
+        "y": 122,
+        "width": 790,
+        "height": 738
+      },
+      "note": "Urgent · backend · note added"
+    },
+    {
+      "id": "before-grade",
+      "file": "31-before-grade.png",
+      "target": {
+        "x": 1518,
+        "y": 93
+      },
+      "focus": null,
+      "note": ""
+    },
+    {
+      "id": "grade-drawer",
+      "file": "32-grade-drawer.png",
+      "target": null,
+      "focus": {
+        "x": 1218,
+        "y": 136,
+        "width": 360,
+        "height": 410
+      },
+      "note": "Seven-dimension grade"
+    },
+    {
+      "id": "before-case-switch",
+      "file": "33-before-case-switch.png",
+      "target": {
+        "x": 377,
+        "y": 93
+      },
+      "focus": {
+        "x": 0,
+        "y": 64,
+        "width": 1600,
+        "height": 58
+      },
+      "note": ""
+    },
+    {
+      "id": "case-guarded-rail",
+      "file": "34-case-guarded-rail.png",
+      "target": null,
+      "focus": {
+        "x": 0,
+        "y": 860,
+        "width": 1600,
+        "height": 40
+      },
+      "note": "close_support_ticket absent: true"
+    },
+    {
+      "id": "case-guarded-task",
+      "file": "35-case-guarded-task.png",
+      "target": null,
+      "focus": {
+        "x": 0,
+        "y": 122,
+        "width": 260,
+        "height": 738
+      },
+      "note": "Guarded close recovery"
+    },
+    {
+      "id": "before-preview-2",
+      "file": "36-before-preview-2.png",
+      "target": {
+        "x": 130,
+        "y": 577
+      },
+      "focus": {
+        "x": 0,
+        "y": 122,
+        "width": 260,
+        "height": 738
+      },
+      "note": ""
+    },
+    {
+      "id": "closed-trace",
+      "file": "37-closed-trace.png",
+      "target": null,
+      "focus": {
+        "x": 1280,
+        "y": 122,
+        "width": 320,
+        "height": 738
+      },
+      "note": "Resolution note then close"
+    },
+    {
+      "id": "closed-ticket",
+      "file": "38-closed-ticket.png",
+      "target": null,
+      "focus": {
+        "x": 490,
+        "y": 122,
+        "width": 790,
+        "height": 738
+      },
+      "note": "Ticket closed"
+    },
+    {
+      "id": "closed-rail",
+      "file": "39-closed-rail.png",
+      "target": null,
+      "focus": {
+        "x": 0,
+        "y": 860,
+        "width": 1600,
+        "height": 40
+      },
+      "note": "tools after close: 8"
+    },
+    {
+      "id": "grade-drawer-2",
+      "file": "40-grade-drawer-2.png",
+      "target": null,
+      "focus": {
+        "x": 1218,
+        "y": 136,
+        "width": 360,
+        "height": 410
+      },
+      "note": "Guarded close graded"
+    },
+    {
+      "id": "before-design-return",
+      "file": "41-before-design-return.png",
+      "target": {
+        "x": 749,
+        "y": 32
+      },
+      "focus": null,
+      "note": ""
+    },
+    {
+      "id": "design-return",
+      "file": "42-design-return.png",
+      "target": null,
+      "focus": {
+        "x": 0,
+        "y": 860,
+        "width": 1600,
+        "height": 40
+      },
+      "note": "back to 12 design tools"
+    },
+    {
+      "id": "before-export",
+      "file": "43-before-export.png",
+      "target": {
+        "x": 1545,
+        "y": 833
+      },
+      "focus": null,
+      "note": ""
+    },
+    {
+      "id": "exported",
+      "file": "44-exported.png",
+      "target": null,
+      "focus": {
+        "x": 0,
+        "y": 0,
+        "width": 1600,
+        "height": 900
+      },
+      "note": "Evidence exported"
+    }
+  ],
+  "registries": {
+    "design": [
+      "get_contract_lab_project",
+      "list_tool_contracts",
+      "get_tool_contract",
+      "lint_tool_contracts",
+      "list_mock_domain_commands",
+      "create_tool_contract",
+      "update_tool_contract",
+      "create_eval_case",
+      "update_eval_case",
+      "compare_contract_versions",
+      "prepare_live_eval",
+      "undo_last_contract_edit"
+    ],
+    "evalTriage": [
+      "get_eval_context",
+      "search_support_tickets",
+      "get_support_ticket",
+      "set_ticket_priority",
+      "assign_ticket_team",
+      "add_ticket_note",
+      "get_ticket_activity"
+    ],
+    "evalGuardedBefore": [
+      "get_eval_context",
+      "search_support_tickets",
+      "get_support_ticket",
+      "set_ticket_priority",
+      "assign_ticket_team",
+      "add_ticket_note",
+      "get_ticket_activity"
+    ],
+    "evalGuardedAfter": [
+      "get_eval_context",
+      "search_support_tickets",
+      "get_support_ticket",
+      "set_ticket_priority",
+      "assign_ticket_team",
+      "add_ticket_note",
+      "close_support_ticket",
+      "get_ticket_activity"
+    ]
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "name": "contractlab-demo-video",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "description": "Remotion composition for the ContractLab product demo",
+  "scripts": {
+    "studio": "remotion studio",
+    "render": "remotion render ContractLabDemo out/contractlab-demo.mp4 --codec=h264 --crf=17",
+    "render:linkedin": "remotion render ContractLabClip out/contractlab-linkedin.mp4 --codec=h264 --crf=17",
+    "still": "remotion still ContractLabDemo out/poster.png"
+  },
+  "dependencies": {
+    "@remotion/cli": "4.0.518",
+    "@remotion/media-utils": "4.0.518",
+    "react": "^19.1.1",
+    "react-dom": "^19.1.1",
+    "remotion": "4.0.518"
+  },
+  "devDependencies": {
+    "@types/react": "^19.1.10",
+    "typescript": "~5.8.3"
+  }
+}

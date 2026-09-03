@@ -1,0 +1,306 @@
+{
+  "paywall": {
+    "kind": "click",
+    "boxes": []
+  },
+  "admin": {
+    "kind": "click",
+    "boxes": [
+      {
+        "x": 562,
+        "y": 402,
+        "width": 476,
+        "height": 406
+      },
+      {
+        "x": 562,
+        "y": 132,
+        "width": 476,
+        "height": 256
+      }
+    ]
+  },
+  "signin": {
+    "kind": "click",
+    "boxes": []
+  },
+  "v1": {
+    "kind": "click",
+    "boxes": [
+      {
+        "x": 262,
+        "y": 522,
+        "width": 346,
+        "height": 346
+      },
+      {
+        "x": 242,
+        "y": 342,
+        "width": 416,
+        "height": 166
+      },
+      {
+        "x": 1312,
+        "y": 202,
+        "width": 236,
+        "height": 136
+      }
+    ]
+  },
+  "flawed": {
+    "kind": "click",
+    "boxes": [
+      {
+        "x": 662,
+        "y": 712,
+        "width": 106,
+        "height": 156
+      },
+      {
+        "x": 242,
+        "y": 322,
+        "width": 416,
+        "height": 66
+      },
+      {
+        "x": 242,
+        "y": 502,
+        "width": 416,
+        "height": 66
+      }
+    ]
+  },
+  "findings": {
+    "kind": "click",
+    "boxes": [
+      {
+        "x": 662,
+        "y": 712,
+        "width": 106,
+        "height": 156
+      },
+      {
+        "x": 242,
+        "y": 322,
+        "width": 416,
+        "height": 66
+      },
+      {
+        "x": 242,
+        "y": 502,
+        "width": 416,
+        "height": 66
+      }
+    ]
+  },
+  "v2": {
+    "kind": "click",
+    "boxes": [
+      {
+        "x": 262,
+        "y": 522,
+        "width": 346,
+        "height": 346
+      },
+      {
+        "x": 242,
+        "y": 342,
+        "width": 416,
+        "height": 166
+      },
+      {
+        "x": 1312,
+        "y": 202,
+        "width": 236,
+        "height": 136
+      }
+    ]
+  },
+  "guarded": {
+    "kind": "click",
+    "boxes": [
+      {
+        "x": 1072,
+        "y": 682,
+        "width": 196,
+        "height": 186
+      },
+      {
+        "x": 662,
+        "y": 682,
+        "width": 146,
+        "height": 116
+      },
+      {
+        "x": 242,
+        "y": 222,
+        "width": 416,
+        "height": 66
+      }
+    ]
+  },
+  "diff": {
+    "kind": "click",
+    "boxes": []
+  },
+  "switch": {
+    "kind": "click",
+    "boxes": [
+      {
+        "x": 2,
+        "y": 762,
+        "width": 216,
+        "height": 136
+      },
+      {
+        "x": 302,
+        "y": 742,
+        "width": 276,
+        "height": 66
+      },
+      {
+        "x": 862,
+        "y": 742,
+        "width": 196,
+        "height": 126
+      }
+    ]
+  },
+  "agent-calls": {
+    "kind": "burst",
+    "steps": [
+      [
+        {
+          "x": 1442,
+          "y": 62,
+          "width": 156,
+          "height": 56
+        },
+        {
+          "x": 1392,
+          "y": 322,
+          "width": 96,
+          "height": 36
+        },
+        {
+          "x": 1282,
+          "y": 182,
+          "width": 46,
+          "height": 46
+        }
+      ],
+      [
+        {
+          "x": 1282,
+          "y": 282,
+          "width": 166,
+          "height": 156
+        },
+        {
+          "x": 582,
+          "y": 132,
+          "width": 56,
+          "height": 36
+        }
+      ],
+      [
+        {
+          "x": 1282,
+          "y": 432,
+          "width": 166,
+          "height": 156
+        }
+      ]
+    ]
+  },
+  "grade": {
+    "kind": "click",
+    "boxes": [
+      {
+        "x": 1182,
+        "y": 142,
+        "width": 418,
+        "height": 466
+      },
+      {
+        "x": 1442,
+        "y": 62,
+        "width": 146,
+        "height": 26
+      }
+    ]
+  },
+  "case-switch": {
+    "kind": "click",
+    "boxes": [
+      {
+        "x": 2,
+        "y": 302,
+        "width": 246,
+        "height": 346
+      },
+      {
+        "x": 1282,
+        "y": 392,
+        "width": 206,
+        "height": 356
+      },
+      {
+        "x": 512,
+        "y": 542,
+        "width": 306,
+        "height": 56
+      }
+    ]
+  },
+  "guarded-run": {
+    "kind": "click",
+    "boxes": [
+      {
+        "x": 1282,
+        "y": 312,
+        "width": 256,
+        "height": 126
+      },
+      {
+        "x": 512,
+        "y": 542,
+        "width": 236,
+        "height": 56
+      },
+      {
+        "x": 1442,
+        "y": 62,
+        "width": 156,
+        "height": 56
+      }
+    ]
+  },
+  "return": {
+    "kind": "click",
+    "boxes": [
+      {
+        "x": 2,
+        "y": 762,
+        "width": 216,
+        "height": 136
+      },
+      {
+        "x": 862,
+        "y": 652,
+        "width": 196,
+        "height": 156
+      },
+      {
+        "x": 662,
+        "y": 712,
+        "width": 126,
+        "height": 136
+      }
+    ]
+  },
+  "export": {
+    "kind": "click",
+    "boxes": []
+  }
+}
