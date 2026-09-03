@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>ContractLab - YouTube Thumbnail</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800;900&family=Fira+Code:wght@500;600&display=swap');
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      width: 1280px;
+      height: 720px;
+      overflow: hidden;
+      font-family: 'Plus Jakarta Sans', -apple-system, sans-serif;
+      background: #07090e;
+      color: #ffffff;
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 48px 64px;
+    }
+
+    /* Ambient Glow Background */
+    .bg-glow-1 {
+      position: absolute;
+      top: -100px;
+      left: -100px;
+      width: 600px;
+      height: 600px;
+      background: radial-gradient(circle, rgba(0, 242, 254, 0.22) 0%, rgba(79, 172, 254, 0.08) 40%, rgba(0,0,0,0) 70%);
+      filter: blur(50px);
+      z-index: 0;
+    }
+
+    .bg-glow-2 {
+      position: absolute;
+      bottom: -150px;
+      right: -100px;
+      width: 700px;
+      height: 700px;
+      background: radial-gradient(circle, rgba(139, 92, 246, 0.25) 0%, rgba(59, 130, 246, 0.1) 45%, rgba(0,0,0,0) 70%);
+      filter: blur(60px);
+      z-index: 0;
+    }
+
+    .grid-overlay {
+      position: absolute;
+      inset: 0;
+      background-image: 
+        linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+      background-size: 32px 32px;
+      z-index: 0;
+      mask-image: radial-gradient(ellipse at center, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0) 80%);
+    }
+
+    /* Main Left Content */
+    .left-content {
+      position: relative;
+      z-index: 2;
+      max-width: 560px;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .badge-pill {
+      align-self: flex-start;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 8px 16px;
+      border-radius: 100px;
+      background: rgba(0, 242, 254, 0.1);
+      border: 1px solid rgba(0, 242, 254, 0.35);
+      color: #00f2fe;
+      font-size: 13px;
+      font-weight: 800;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      box-shadow: 0 0 20px rgba(0, 242, 254, 0.2);
+    }
+
+    .badge-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: #00f2fe;
+      box-shadow: 0 0 10px #00f2fe;
+    }
+
+    .main-title {
+      font-size: 64px;
+      font-weight: 900;
+      line-height: 1.05;
+      letter-spacing: -0.03em;
+    }
+
+    .title-gradient {
+      background: linear-gradient(135deg, #ffffff 30%, #a5f3fc 70%, #38bdf8 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      display: block;
+    }
+
+    .title-accent {
+      background: linear-gradient(135deg, #38bdf8 0%, #818cf8 50%, #c084fc 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      display: block;
+    }
+
+    .subtitle {
+      font-size: 20px;
+      font-weight: 600;
+      color: #94a3b8;
+      line-height: 1.4;
+    }
+
+    .feature-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 10px;
+    }
+
+    .tag {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      padding: 8px 14px;
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      border-radius: 10px;
+      font-size: 13px;
+      font-weight: 700;
+      color: #e2e8f0;
+      backdrop-filter: blur(10px);
+    }
+
+    .tag-icon {
+      color: #38bdf8;
+    }
+
+    /* Right Preview Window */
+    .right-preview {
+      position: relative;
+      z-index: 2;
+      width: 550px;
+      height: 480px;
+      perspective: 1000px;
+    }
+
+    .window-card {
+      width: 100%;
+      height: 100%;
+      background: rgba(15, 23, 42, 0.85);
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      border-radius: 20px;
+      box-shadow: 
+        0 25px 60px -12px rgba(0, 0, 0, 0.7),
+        0 0 40px rgba(56, 189, 248, 0.15);
+      backdrop-filter: blur(20px);
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      transform: rotateY(-6deg) rotateX(4deg);
+      transition: transform 0.3s ease;
+    }
+
+    .window-header {
+      height: 44px;
+      background: rgba(30, 41, 59, 0.8);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+      display: flex;
+      align-items: center;
+      padding: 0 16px;
+      gap: 12px;
+    }
+
+    .window-dots {
+      display: flex;
+      gap: 8px;
+    }
+
+    .dot {
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+    }
+    .dot-red { background: #ef4444; }
+    .dot-yellow { background: #f59e0b; }
+    .dot-green { background: #10b981; }
+
+    .window-title {
+      font-size: 12px;
+      font-weight: 600;
+      color: #64748b;
+      font-family: 'Fira Code', monospace;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .window-body {
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      flex: 1;
+    }
+
+    /* Mock Code Block */
+    .code-block {
+      background: rgba(2, 6, 23, 0.9);
+      border: 1px solid rgba(56, 189, 248, 0.2);
+      border-radius: 12px;
+      padding: 16px;
+      font-family: 'Fira Code', monospace;
+      font-size: 12px;
+      line-height: 1.6;
+      color: #e2e8f0;
+      position: relative;
+    }
+
+    .kw { color: #f472b6; font-weight: 600; }
+    .fn { color: #38bdf8; font-weight: 600; }
+    .str { color: #34d399; }
+    .num { color: #fbbf24; }
+    .cm { color: #64748b; font-style: italic; }
+
+    .lint-badge {
+      position: absolute;
+      top: 12px;
+      right: 12px;
+      background: rgba(16, 185, 129, 0.15);
+      border: 1px solid rgba(16, 185, 129, 0.4);
+      color: #34d399;
+      font-size: 11px;
+      font-weight: 700;
+      padding: 4px 10px;
+      border-radius: 6px;
+      display: flex;
+      align-items: center;
+      gap: 5px;
+    }
+
+    /* 7-Dim Score Grid */
+    .score-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 10px;
+    }
+
+    .score-card {
+      background: rgba(30, 41, 59, 0.6);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 10px;
+      padding: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .score-label {
+      font-size: 12px;
+      font-weight: 600;
+      color: #94a3b8;
+    }
+
+    .score-val {
+      font-size: 15px;
+      font-weight: 800;
+      color: #38bdf8;
+    }
+
+    .score-bar {
+      width: 100%;
+      height: 4px;
+      background: rgba(255,255,255,0.1);
+      border-radius: 2px;
+      margin-top: 6px;
+      overflow: hidden;
+    }
+
+    .score-fill {
+      height: 100%;
+      background: linear-gradient(90deg, #38bdf8, #818cf8);
+      border-radius: 2px;
+    }
+
+    /* Floating Floating Pill Callout */
+    .floating-pill {
+      position: absolute;
+      bottom: -15px;
+      left: -25px;
+      background: linear-gradient(135deg, #6366f1, #8b5cf6);
+      color: #ffffff;
+      padding: 12px 20px;
+      border-radius: 14px;
+      font-size: 14px;
+      font-weight: 800;
+      box-shadow: 0 10px 30px rgba(99, 102, 241, 0.5);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="bg-glow-1"></div>
+  <div class="bg-glow-2"></div>
+  <div class="grid-overlay"></div>
+
+  <!-- Left Content -->
+  <div class="left-content">
+    <div class="badge-pill">
+      <div class="badge-dot"></div>
+      WebMCP Tool Protocol
+    </div>
+
+    <h1 class="main-title">
+      <span class="title-gradient">ContractLab</span>
+      <span class="title-accent">AI Workbench</span>
+    </h1>
+
+    <p class="subtitle">
+      Design, lint, simulate & live-eval WebMCP tool contracts with 7-dimension deterministic grading.
+    </p>
+
+    <div class="feature-tags">
+      <div class="tag"><span class="tag-icon">⚡</span> Zero-Trust Eval</div>
+      <div class="tag"><span class="tag-icon">🔍</span> Dynamic Linting</div>
+      <div class="tag"><span class="tag-icon">📊</span> 7-Dim Grader</div>
+      <div class="tag"><span class="tag-icon">🔐</span> Polar Paywall</div>
+    </div>
+  </div>
+
+  <!-- Right Preview Window -->
+  <div class="right-preview">
+    <div class="window-card">
+      <div class="window-header">
+        <div class="window-dots">
+          <div class="dot dot-red"></div>
+          <div class="dot dot-yellow"></div>
+          <div class="dot dot-green"></div>
+        </div>
+        <div class="window-title">webmcp_contract.config.ts</div>
+      </div>
+
+      <div class="window-body">
+        <div class="code-block">
+          <div class="lint-badge">✓ LINT PASSED</div>
+          <div><span class="kw">export const</span> <span class="fn">ticketContract</span> = {</div>
+          <div>&nbsp;&nbsp;name: <span class="str">"resolve_ticket"</span>,</div>
+          <div>&nbsp;&nbsp;webmcp: <span class="str">"1.0.0"</span>,</div>
+          <div>&nbsp;&nbsp;safeEffect: <span class="kw">true</span>,</div>
+          <div>&nbsp;&nbsp;schema: { id: <span class="str">"string"</span>, priority: <span class="num">1</span> }</div>
+          <div>};</div>
+        </div>
+
+        <div class="score-grid">
+          <div class="score-card" style="flex-direction: column; align-items: flex-start;">
+            <div style="display:flex; justify-content:space-between; width:100%;">
+              <span class="score-label">Tool Choice</span>
+              <span class="score-val">100%</span>
+            </div>
+            <div class="score-bar"><div class="score-fill" style="width: 100%;"></div></div>
+          </div>
+          <div class="score-card" style="flex-direction: column; align-items: flex-start;">
+            <div style="display:flex; justify-content:space-between; width:100%;">
+              <span class="score-label">Param Precision</span>
+              <span class="score-val">98%</span>
+            </div>
+            <div class="score-bar"><div class="score-fill" style="width: 98%;"></div></div>
+          </div>
+          <div class="score-card" style="flex-direction: column; align-items: flex-start;">
+            <div style="display:flex; justify-content:space-between; width:100%;">
+              <span class="score-label">State Guards</span>
+              <span class="score-val">PASS</span>
+            </div>
+            <div class="score-bar"><div class="score-fill" style="width: 100%; background: #34d399;"></div></div>
+          </div>
+          <div class="score-card" style="flex-direction: column; align-items: flex-start;">
+            <div style="display:flex; justify-content:space-between; width:100%;">
+              <span class="score-label">Execution Time</span>
+              <span class="score-val">12ms</span>
+            </div>
+            <div class="score-bar"><div class="score-fill" style="width: 85%;"></div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="floating-pill">
+      <span>🚀</span> Live AI Sandbox Evaluation
+    </div>
+  </div>
+
+</body>
+</html>
